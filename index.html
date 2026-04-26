@@ -1189,7 +1189,7 @@ canvas{width:100%;height:160px;display:block}
 // indPe=industry avg P/E, tags=search keywords
 const STOCKS=[
   // AUTO
-  {id:'MRF',nm:'MRF Ltd',sec:'auto',sl:'Tyres · NSE: MRF',pr:131450,ch:1240,pct:.95,logo:'MR',lb:'#FFF3E0',lt:'#E65100',mc:'₹55,800 Cr',pe:'27.3x',yr:'+12.4%',yrc:true,div:'₹169/unit',w52h:151445,w52l:110100,eps:4820,bv:58500,roe:14.2,de:0.15,fv:10,beta:0.82,rev:'₹25,169 Cr',np:'₹2,081 Cr',indPe:26,tags:['tyre','rubber','car','bike'],desc:{en:"MRF makes tyres for cars, trucks, bikes, and aircraft. India's most expensive single unit — own a fraction.",hi:"MRF कार, ट्रक, बाइक के टायर बनाती है। भारत का सबसे महंगा यूनिट।"}},
+  {id:'MRF',nm:'MRF Ltd',sec:'auto',sl:'Tyres · NSE: MRF',pr:131450,ch:1240,pct:.95,logo:'MR',lb:'#FFF3E0',lt:'#E65100',mc:'₹55,800 Cr',pe:'27.3x',yr:'+12.4%',yrc:true,div:'₹169/unit',w52h:151445,w52l:110100,eps:4820,bv:58500,roe:14.2,de:0.15,fv:10,beta:0.82,rev:'₹25,169 Cr',np:'₹2,081 Cr',indPe:26,minTicket:1321.45,minFrac:0.01,tags:['tyre','rubber','car','bike'],desc:{en:"MRF makes tyres for cars, trucks, bikes, and aircraft. India's most expensive single unit — own a fraction.",hi:"MRF कार, ट्रक, बाइक के टायर बनाती है। भारत का सबसे महंगा यूनिट।"}},
   {id:'MARUTI',nm:'Maruti Suzuki',sec:'auto',sl:'Auto · NSE: MARUTI',pr:12800,ch:95,pct:.75,logo:'MS',lb:'#E3F2FD',lt:'#0D47A1',mc:'₹3,87,000 Cr',pe:'29.8x',yr:'+8.2%',yrc:true,div:'₹125/unit',w52h:13680,w52l:10725,eps:430,bv:2950,roe:15.5,de:0.01,fv:5,beta:0.88,rev:'₹1,34,738 Cr',np:'₹13,488 Cr',indPe:26,tags:['car','alto','swift','auto'],desc:{en:"Maruti Suzuki sells nearly 1 in 2 cars in India — from the budget Alto to the premium Grand Vitara."}},
   {id:'TATAMOTORS',nm:'Tata Motors',sec:'auto',sl:'Auto · NSE: TATAMOTORS',pr:980,ch:-12,pct:-1.21,logo:'TM',lb:'#E8EAF6',lt:'#1A237E',mc:'₹3,62,000 Cr',pe:'8.7x',yr:'+31.4%',yrc:true,div:'₹3/unit',w52h:1180,w52l:720,eps:112.8,bv:285,roe:28.4,de:1.15,fv:2,beta:1.38,rev:'₹4,37,928 Cr',np:'₹31,806 Cr',indPe:26,tags:['car','ev','nexon','safari','jlr'],desc:{en:"Tata Motors makes the Tiago, Nexon EV, Safari, and owns Jaguar Land Rover globally."}},
   {id:'MAHINDRA',nm:'Mahindra & Mahindra',sec:'auto',sl:'Auto · NSE: M&M',pr:2880,ch:38,pct:1.33,logo:'MM',lb:'#FFEBEE',lt:'#B71C1C',mc:'₹3,58,000 Cr',pe:'29.4x',yr:'+41.8%',yrc:true,div:'₹21/unit',w52h:3270,w52l:1720,eps:98,bv:560,roe:17.9,de:0.25,fv:5,beta:1.15,rev:'₹99,070 Cr',np:'₹11,269 Cr',indPe:26,tags:['suv','tractor','xuv','thar'],desc:{en:"Mahindra makes XUV, Scorpio, Thar SUVs and dominates the tractor market across rural India."}},
@@ -1204,13 +1204,13 @@ const STOCKS=[
   {id:'BHARTIARTL',nm:'Bharti Airtel',sec:'telecom',sl:'Telecom · NSE: BHARTIARTL',pr:1780,ch:24,pct:1.37,logo:'BA',lb:'#FCE4EC',lt:'#880E4F',mc:'₹10,60,000 Cr',pe:'68.4x',yr:'+34.2%',yrc:true,div:'₹8/unit',w52h:1779,w52l:1098,eps:26,bv:152,roe:17.2,de:1.45,fv:5,beta:0.65,rev:'₹1,49,981 Cr',np:'₹7,468 Cr',indPe:62,tags:['telecom','mobile','5g','jio'],desc:{en:"Airtel is India's second-largest telecom with 550 million subscribers and a fast-growing Africa business."}},
   // FMCG / CONSUMER
   {id:'ITC',nm:'ITC Ltd',sec:'fmcg',sl:'FMCG · NSE: ITC',pr:425,ch:5,pct:1.19,logo:'IT',lb:'#FFF3E0',lt:'#E65100',mc:'₹5,31,000 Cr',pe:'25.1x',yr:'-5.4%',yrc:false,div:'₹13.75/unit',w52h:502,w52l:386,eps:16.9,bv:64,roe:26.2,de:0.01,fv:1,beta:0.52,rev:'₹75,803 Cr',np:'₹20,458 Cr',indPe:55,tags:['cigarette','food','aashirvaad','classmate','hotel'],desc:{en:"ITC owns Classmate, Aashirvaad, Sunfeast, and premium hotels — India's biggest cigarette maker too."}},
-  {id:'NESTLEIND',nm:'Nestlé India',sec:'fmcg',sl:'Consumer · NSE: NESTLEIND',pr:24500,ch:-180,pct:-.73,logo:'NE',lb:'#FCE4EC',lt:'#880E4F',mc:'₹2,36,100 Cr',pe:'77.3x',yr:'+5.1%',yrc:true,div:'₹270/unit',w52h:27400,w52l:21700,eps:316,bv:248,roe:127,de:0.09,fv:10,beta:0.48,rev:'₹24,541 Cr',np:'₹3,060 Cr',indPe:55,tags:['food','maggi','kitkat','chocolate'],desc:{en:"Nestlé makes Maggi noodles, KitKat, and Milkmaid — found in almost every Indian household."}},
+  {id:'NESTLEIND',nm:'Nestlé India',sec:'fmcg',sl:'Consumer · NSE: NESTLEIND',pr:24500,ch:-180,pct:-.73,logo:'NE',lb:'#FCE4EC',lt:'#880E4F',mc:'₹2,36,100 Cr',pe:'77.3x',yr:'+5.1%',yrc:true,div:'₹270/unit',w52h:27400,w52l:21700,eps:316,bv:248,roe:127,de:0.09,fv:10,beta:0.48,rev:'₹24,541 Cr',np:'₹3,060 Cr',indPe:55,minTicket:126.73,minFrac:0.09,tags:['food','maggi','kitkat','chocolate'],desc:{en:"Nestlé makes Maggi noodles, KitKat, and Milkmaid — found in almost every Indian household."}},
   {id:'TITAN',nm:'Titan Company',sec:'fmcg',sl:'Jewellery · NSE: TITAN',pr:3280,ch:42,pct:1.30,logo:'TT',lb:'#F3E5F5',lt:'#6A1B9A',mc:'₹2,91,000 Cr',pe:'88.6x',yr:'+18.7%',yrc:true,div:'₹11/unit',w52h:3886,w52l:2925,eps:37,bv:120,roe:30.8,de:0.42,fv:1,beta:0.78,rev:'₹50,894 Cr',np:'₹3,497 Cr',indPe:55,tags:['jewellery','watch','tanishq','fastrack'],desc:{en:"Titan makes Tanishq jewellery, Titan watches, and Fastrack. A Tata Group brand loved across India."}},
   {id:'HINDUNILVR',nm:'Hindustan Unilever',sec:'fmcg',sl:'FMCG · NSE: HINDUNILVR',pr:2290,ch:-18,pct:-.78,logo:'HU',lb:'#E3F2FD',lt:'#1565C0',mc:'₹5,37,000 Cr',pe:'52.4x',yr:'+2.1%',yrc:true,div:'₹24/unit',w52h:2945,w52l:2172,eps:43.7,bv:70,roe:100.2,de:0.02,fv:1,beta:0.42,rev:'₹60,109 Cr',np:'₹10,277 Cr',indPe:55,tags:['soap','shampoo','dove','lux','surf'],desc:{en:"HUL owns Surf Excel, Dove, Lux, and Knorr. If you used a soap or shampoo in India, it's probably theirs."}},
   {id:'ASIANPAINT',nm:'Asian Paints',sec:'fmcg',sl:'Paints · NSE: ASIANPAINT',pr:2490,ch:-22,pct:-.88,logo:'AP',lb:'#FFF3E0',lt:'#BF360C',mc:'₹2,38,000 Cr',pe:'50.2x',yr:'-8.3%',yrc:false,div:'₹22/unit',w52h:3422,w52l:2125,eps:49.6,bv:230,roe:25.8,de:0.05,fv:1,beta:0.55,rev:'₹35,494 Cr',np:'₹5,459 Cr',indPe:48,tags:['paint','wall','decor','color'],desc:{en:"Asian Paints colors more than half the walls in India — a dominant brand with massive distribution reach."}},
   {id:'BRITANNIA',nm:'Britannia',sec:'fmcg',sl:'Foods · NSE: BRITANNIA',pr:4880,ch:35,pct:.72,logo:'BR',lb:'#FFEBEE',lt:'#C62828',mc:'₹1,17,600 Cr',pe:'61.2x',yr:'+3.8%',yrc:true,div:'₹72/unit',w52h:6473,w52l:4635,eps:79.8,bv:108,roe:73.4,de:0.12,fv:1,beta:0.55,rev:'₹17,121 Cr',np:'₹2,139 Cr',indPe:55,tags:['biscuit','bread','food','goodday'],desc:{en:"Britannia makes Good Day, Marie Gold, Tiger biscuits — India's favourite biscuit company."}},
   {id:'DABUR',nm:'Dabur India',sec:'fmcg',sl:'FMCG · NSE: DABUR',pr:495,ch:4,pct:.81,logo:'DB',lb:'#E8F5E9',lt:'#2E7D32',mc:'₹87,800 Cr',pe:'52.8x',yr:'-8.7%',yrc:false,div:'₹5.25/unit',w52h:672,w52l:482,eps:9.4,bv:44,roe:21.2,de:0.04,fv:1,beta:0.48,rev:'₹12,404 Cr',np:'₹1,783 Cr',indPe:55,tags:['ayurveda','chyawanprash','real','juice'],desc:{en:"Dabur makes Chyawanprash, Real juice, Vatika — leader in Ayurveda-based FMCG."}},
-  {id:'PAGE',nm:'Page Industries',sec:'fmcg',sl:'Apparel · NSE: PAGEIND',pr:41200,ch:-320,pct:-.77,logo:'PG',lb:'#E8F5E9',lt:'#2E7D32',mc:'₹45,800 Cr',pe:'71.2x',yr:'+9.8%',yrc:true,div:'₹500/unit',w52h:45975,w52l:33050,eps:580,bv:1820,roe:43.2,de:0.07,fv:10,beta:0.62,rev:'₹4,936 Cr',np:'₹645 Cr',indPe:55,tags:['jockey','apparel','innerwear'],desc:{en:"Page Industries is the exclusive Jockey licensee in India. Almost every gym-goer wears their products."}},
+  {id:'PAGE',nm:'Page Industries',sec:'fmcg',sl:'Apparel · NSE: PAGEIND',pr:41200,ch:-320,pct:-.77,logo:'PG',lb:'#E8F5E9',lt:'#2E7D32',mc:'₹45,800 Cr',pe:'71.2x',yr:'+9.8%',yrc:true,div:'₹500/unit',w52h:45975,w52l:33050,eps:580,bv:1820,roe:43.2,de:0.07,fv:10,beta:0.62,rev:'₹4,936 Cr',np:'₹645 Cr',indPe:55,minTicket:611.75,minFrac:0.02,tags:['jockey','apparel','innerwear'],desc:{en:"Page Industries is the exclusive Jockey licensee in India. Almost every gym-goer wears their products."}},
   // FINANCE / BANKING
   {id:'HDFCBANK',nm:'HDFC Bank',sec:'finance',sl:'Private Bank · NSE: HDFCBANK',pr:1670,ch:14,pct:.84,logo:'HD',lb:'#E8F5E9',lt:'#1B5E20',mc:'₹12,70,000 Cr',pe:'18.2x',yr:'+3.2%',yrc:true,div:'₹19/unit',w52h:1880,w52l:1363,eps:92,bv:595,roe:17.8,de:7.8,fv:1,beta:0.87,rev:'₹4,07,995 Cr',np:'₹60,812 Cr',indPe:17,tags:['bank','loans','banking'],desc:{en:"HDFC Bank is India's largest private bank — reliable and trusted by crores of Indians for decades."}},
   {id:'ICICIBANK',nm:'ICICI Bank',sec:'finance',sl:'Private Bank · NSE: ICICIBANK',pr:1280,ch:16,pct:1.27,logo:'IC',lb:'#FFF3E0',lt:'#E65100',mc:'₹9,02,000 Cr',pe:'17.6x',yr:'+19.4%',yrc:true,div:'₹10/unit',w52h:1362,w52l:970,eps:72.8,bv:387,roe:17.9,de:6.8,fv:2,beta:0.88,rev:'₹2,36,037 Cr',np:'₹40,888 Cr',indPe:17,tags:['bank','loans','banking'],desc:{en:"ICICI Bank is India's second-largest private bank, known for digital-first banking and strong retail lending."}},
@@ -1916,7 +1916,7 @@ function showStock(id,noPageSwitch){
     else{vv.textContent='⚖️ '+tr('fair');vv.style.color='#D97706';}
   }
   document.getElementById('inv-nm').textContent=s.nm;
-  document.getElementById('inv-amt').value=500;updFrac();
+  document.getElementById('inv-amt').value=Math.max(500,s.minTicket||0);updFrac();
   // Reset AI box
   const aiRes=document.getElementById('ai-result');
   aiRes.textContent=tr('ai_ph');
@@ -2029,8 +2029,13 @@ function updFrac(){
   // Show wallet balance warning
   const walletEl=document.getElementById('wallet-bal-hint');
   if(walletEl){
-    walletEl.textContent=`Wallet: ₹${APP.wallet.toLocaleString('en-IN')}`;
-    walletEl.style.color=amt>APP.wallet?'var(--rd)':'var(--tx2)';
+    if(s.minTicket&&amt>0&&amt<s.minTicket){
+      walletEl.textContent=`Min investment: ₹${s.minTicket} (${s.minFrac} units)`;
+      walletEl.style.color='var(--rd)';
+    } else {
+      walletEl.textContent=`Wallet: ₹${APP.wallet.toLocaleString('en-IN')}${s.minTicket?' · Min: ₹'+s.minTicket:''}`;
+      walletEl.style.color=amt>APP.wallet?'var(--rd)':'var(--tx2)';
+    }
   }
 }
 function setAmt(v){document.getElementById('inv-amt').value=v;updFrac();}
@@ -2040,6 +2045,7 @@ function placeOrder(){
   const s=STOCKS.find(x=>x.id===curStock);
   if(amt<=0){showToast('⚠️ Enter an amount to invest');return;}
   if(amt<10){showToast('⚠️ Enter a higher amount to invest');return;}
+  if(s.minTicket&&amt<s.minTicket){showToast(`⚠️ Minimum investment for ${s.nm} is ₹${s.minTicket} (${s.minFrac} units)`);return;}
   const fee=parseFloat((amt*.0025).toFixed(2));
   const total=amt+fee;
   if(total>APP.wallet){showToast(`⚠️ Insufficient wallet balance. Add funds from Profile.`);return;}
@@ -2092,7 +2098,7 @@ function confirmOrder(stockId,amt,fee,total,frac){
   saveState();
   refreshHomeUI();
   showToast(`✅ Bought ${frac} units of ${s.nm}!`);
-  document.getElementById('inv-amt').value=500;updFrac();
+  document.getElementById('inv-amt').value=Math.max(500,s.minTicket||0);updFrac();
 }
 
 function addFunds(amount){
